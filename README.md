@@ -6,16 +6,25 @@ His examples
 compareTo Method
 
 public int compareTo(Object obj) {
-Person p = (Person) obj;
+P
+erson p = (Person) obj;
+
 return name.compareTo(p.name);
+
 }
 
 insertionSort(a)
 -
 for i=1 to a.length-1 by 1 
+
 current = a[i] 
+
 for j=i-1 to 0 by -1 
+
 if current < a[j] 
+
 temp <- a[j+1] 
+
 a[j+1] <- a[j] 
+
 a[j] <- temp
