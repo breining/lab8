@@ -184,27 +184,22 @@ public class AddressBook {
     /**
      *
      * @param a []
+     * @return 
      */
-    public int insertion(int a[]) {
+    public void insertionSort(String a[]) {
+        String temp;
         for (int i = 1; i < a.length - 1; i++) {
-            int current = a[i];
-            for (int j = i - 1; j >= 0 && current < a[j]; j--) {
-               // if (current < a[j])
-                if (a[i].compareTo(a[j]) == 0){
-                    return 0;
-                }
-                else if (a[i].compareTo(a[j]) < 0){
-                    return -1;
-                }
-                else return 1;
+            String current = a[i];
+            for (int j = i - 1; j > 0; j--) {
+                if (current.compareTo(a[j]) < 0)
+                    temp = a[j+1];
+                    a[j+1] = a[j];
+                    a[j] = temp;
+                
  
                     
-                //a[j + 1] = a[j];
-                
-                //current = a[j + 1];
             }
         }
-        return 0;
     }
 
     public static void main(String[] args) {
