@@ -88,14 +88,14 @@ public abstract class Contact implements Comparable {
      * @param obj
      * @return integer that determines the placement
      */
-    @Override
-    public int compareTo(Object obj) {
-        int comparison = this.phoneNumber.compareTo((Contact) obj).phoneNumber);
+    public int compareTo(Contact obj) {
+        
+        int comparison = name.compareTo(obj.name);
         if (comparison != 0)
             return comparison;
-        else
+        else 
         return 0;
-        else     }
+    }
 
     /**
      *
